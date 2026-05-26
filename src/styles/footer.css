@@ -1,0 +1,16 @@
+/* Footer styles */
+
+.footer {
+  width: 100%;
+  padding: 18px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 14px;
+}
+

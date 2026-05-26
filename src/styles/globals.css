@@ -1,0 +1,24 @@
+/* Global styles */
+
+:root {
+  --primary: #aa3bff;
+  --text: #6b6375;
+  --bg: #ffffff;
+  --border: #e5e4e7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}

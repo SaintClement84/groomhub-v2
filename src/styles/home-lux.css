@@ -1,0 +1,171 @@
+/* =========================
+   GROOMHUB HOME PAGE CSS
+   Luxury Black + Gold UI
+========================= */
+
+/* NOTE: This is a standalone Home theme.
+   It does not replace your global app Navbar/Footer.
+*/
+
+.home-lux * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-lux {
+  background: #0a0a0a;
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.home-lux .hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150px 80px 80px;
+  margin-top: 0; /* relies on global layout padding */
+}
+
+.home-lux .hero-left {
+  width: 55%;
+}
+
+.home-lux .hero-left h1 {
+  font-size: 72px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.home-lux .hero-left span {
+  color: #d4af37;
+}
+
+.home-lux .hero-left p {
+  color: #b5b5b5;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  max-width: 650px;
+}
+
+.home-lux .hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.home-lux .primary-btn {
+  background: #d4af37;
+  color: black;
+  border: none;
+  padding: 18px 34px;
+  border-radius: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-lux .primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.28);
+}
+
+.home-lux .secondary-btn {
+  background: transparent;
+  border: 1px solid #2d2d2d;
+  color: white;
+  padding: 18px 34px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-lux .secondary-btn:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+/* =========================
+   HERO RIGHT PANEL
+========================= */
+
+.home-lux .hero-right {
+  width: 38%;
+}
+
+.home-lux .hero-card {
+  background: #111111;
+  border: 1px solid #1f1f1f;
+  border-radius: 30px;
+  padding: 35px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.home-lux .hero-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.home-lux .hero-card p {
+  color: #888;
+  margin-bottom: 25px;
+}
+
+.home-lux .status-pill {
+  display: inline-block;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #d4af37;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .home-lux .hero {
+    flex-direction: column;
+    gap: 60px;
+    padding: 140px 30px 60px;
+  }
+  .home-lux .hero-left,
+  .home-lux .hero-right {
+    width: 100%;
+  }
+  .home-lux .hero-left h1 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-lux .hero {
+    padding: 120px 18px 50px;
+  }
+  .home-lux .hero-left h1 {
+    font-size: 42px;
+  }
+  .home-lux .hero-buttons {
+    gap: 14px;
+  }
+}
