@@ -1,0 +1,24 @@
+.todo-list {
+  padding: 1rem;
+}
+
+.todo-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list li {
+  margin-bottom: 0.5rem;
+}
+
+.todo-list li:last-child {
+  margin-bottom: 0;
+}
+
+.empty-list {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #adb5bd;
+  font-size: 1rem;
+}
