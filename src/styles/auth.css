@@ -1,0 +1,146 @@
+.auth{
+  width:100%;
+  padding:40px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.auth__panel{
+  width:min(720px,92vw);
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(17,17,17,.95), rgba(11,11,11,.95));
+  box-shadow:0 24px 80px rgba(0,0,0,.4);
+  padding:26px;
+}
+
+.auth__tabs{
+  display:flex;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+.auth__tab{
+  flex:1;
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:10px 12px;
+  cursor:pointer;
+  font-weight:800;
+  transition:all 150ms ease;
+}
+
+.auth__tab:hover{ 
+  border-color:var(--accent-border);
+  color:var(--accent);
+}
+
+.auth__tab.is-active{
+  background:rgba(212,175,55,.08);
+  border-color:rgba(212,175,55,.45);
+  color:var(--accent);
+  cursor:default;
+}
+
+.auth__title{
+  margin:0;
+  font-size:34px;
+  color:var(--text-h);
+  letter-spacing:-.5px;
+}
+
+.auth__subtitle{
+  margin:10px 0 18px;
+  color:var(--muted);
+}
+
+.auth__message{
+  margin:10px 0 18px;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+.auth__message--error{
+  background:rgba(255, 70, 70, .08);
+  border-color:rgba(255, 70, 70, .35);
+  color:#ffb3b3;
+}
+
+.auth__message--success{
+  background:rgba(212,175,55,.08);
+  border-color:rgba(212,175,55,.35);
+  color:var(--accent);
+}
+
+.auth__form{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  text-align:left;
+}
+
+.auth__field{
+  display:grid;
+  gap:8px;
+}
+
+.auth__label{
+  font-weight:800;
+  color:var(--text-h);
+}
+
+.auth__optional{
+  color:var(--muted);
+  font-weight:700;
+  font-size:13px;
+}
+
+.auth__input{
+  width:100%;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:rgba(15,15,15,.6);
+  padding:12px 14px;
+  color:var(--text);
+  outline:none;
+}
+
+.auth__input:focus{
+  border-color:var(--accent-border);
+  box-shadow:0 0 0 3px rgba(212,175,55,.12);
+}
+
+.auth__submit{
+  margin-top:8px;
+  width:100%;
+  background:var(--accent);
+  color:#000;
+  font-weight:900;
+  border:0;
+  border-radius:12px;
+  padding:12px 14px;
+  cursor:pointer;
+  transition:transform 120ms ease, box-shadow 120ms ease;
+}
+
+.auth__submit:hover{
+  transform:translateY(-1px);
+  box-shadow:0 18px 40px rgba(212,175,55,.22);
+}
+
+.auth__link{
+  margin-top:10px;
+  background:transparent;
+  border:0;
+  color:var(--accent);
+  cursor:pointer;
+  padding:6px 0;
+  font-weight:900;
+}
+
+.auth__link:hover{ text-decoration:underline; }
+
