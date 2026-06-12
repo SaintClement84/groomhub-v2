@@ -1,10 +1,20 @@
 /* Global styles */
 
 :root {
-  --primary: #aa3bff;
-  --text: #6b6375;
-  --bg: #ffffff;
-  --border: #e5e4e7;
+  /* Luxury black + gold theme (shared across all app pages) */
+  --primary: #aa3bff; /* keep existing primary for any legacy usage */
+
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface-2: #0f0f0f;
+
+  --text: #bcb7c2;
+  --text-h: #d4af37;
+  --muted: rgba(255, 255, 255, 0.72);
+
+  --border: rgba(212, 212, 212, 0.12);
+  --accent: #d4af37;
+  --accent-border: rgba(212, 175, 55, 0.5);
 }
 
 * {
@@ -21,4 +31,9 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
+}
+
+/* Ensure all app pages match luxury theme defaults */
+main {
+  background: transparent;
 }

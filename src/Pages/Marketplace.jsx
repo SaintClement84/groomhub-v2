@@ -1,12 +1,50 @@
+import { useMemo, useState } from 'react'
+
 import { marketplaceData } from '../data/marketplaceData'
 
 export default function Marketplace() {
+  const categories = useMemo(() => {
+    const set = new Set(marketplaceData.products.map((p) => p.category).filter(Boolean))
+    return ['All', ...Array.from(set)]
+  }, [])
+
+  const [category, setCategory] = useState('All')
+
+  const filtered = useMemo(() => {
+    if (category === 'All') return marketplaceData.products
+    return marketplaceData.products.filter((p) => p.category === category)
+  }, [category])
+
   return (
     <div style={{ padding: 24, textAlign: 'left' }}>
       <h1 style={{ marginTop: 8 }}>Marketplace</h1>
       <p style={{ marginBottom: 18, marginTop: 0, opacity: 0.95 }}>
         Tools and products for a sharper routine.
       </p>
+
+      <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 18 }}>
+        <label style={{ fontWeight: 800, opacity: 0.92 }}>Category</label>
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          style={{
+            borderRadius: 12,
+            border: `1px solid var(--accent-border)`,
+            background: 'var(--bg)',
+            padding: '10px 12px',
+            color: 'var(--text-h)',
+            cursor: 'pointer',
+            minWidth: 180,
+          }}
+        >
+          {categories.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
+      </div>
+
 
       <div
         style={{
@@ -15,7 +53,7 @@ export default function Marketplace() {
           gap: 14,
         }}
       >
-        {marketplaceData.products.map((it) => (
+        {filtered.map((it) => (
           <div
             key={it.id}
             style={{ border: '1px solid var(--border)', borderRadius: 14, padding: 16 }}
@@ -43,4 +81,5 @@ export default function Marketplace() {
     </div>
   )
 }
+
 

@@ -26,6 +26,8 @@ export default function Home() {
               Login
             </a>
           </div>
+
+
         </div>
 
         <div className="hero-right" aria-hidden="true">

@@ -1,6 +1,13 @@
-import { NavLink } from 'react-router-dom'
+import { useMemo } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+
+import { isLoggedIn, logoutUser } from '../lib/auth'
 
 export default function Navbar() {
+  const navigate = useNavigate()
+
+  const loggedIn = useMemo(() => isLoggedIn(), [])
+
   return (
     <header className="navbar" aria-label="Primary navigation">
       <NavLink to="/" className="navbar__brand">
@@ -26,8 +33,32 @@ export default function Navbar() {
         <NavLink to="/marketplace" className="navbar__link">
           Marketplace
         </NavLink>
+
+        {!loggedIn ? (
+          <>
+            <NavLink to="/signup" className="navbar__link">
+              Sign Up
+            </NavLink>
+            <NavLink to="/login" className="navbar__link">
+              Login
+            </NavLink>
+          </>
+        ) : (
+          <button
+            type="button"
+            className="navbar__link"
+            style={{ cursor: 'pointer', background: 'transparent', border: 0 }}
+            onClick={() => {
+              logoutUser()
+              navigate('/')
+            }}
+          >
+            Log Out
+          </button>
+        )}
       </nav>
     </header>
   )
 }
+
 
